@@ -97,7 +97,7 @@ const tiers = [
     title: 'Bassic',
     price: '45.000',
     description: ['Kelola stok produk dengan mudah', 'Laporan penjualan lengkap', 'Jual produk digital'],
-    buttonText: 'Sign up for free',
+    buttonText: 'Aku Mau !',
     buttonVariant: 'outlined',
   },
   {
@@ -109,7 +109,7 @@ const tiers = [
       'Dukungan printer struk',
       'Live support 24 jam',
     ],
-    buttonText: 'Get started',
+    buttonText: 'Aku Mau !',
     buttonVariant: 'contained',
   },
   {
@@ -121,7 +121,7 @@ const tiers = [
       'Jual produk digital',
       
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Aku Mai !',
     buttonVariant: 'outlined',
   },
 ];
