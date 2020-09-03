@@ -26,16 +26,6 @@ const Footer= () =>(
   </div>
 );
 
-const loginModal =() =>(
-  <Modal
-  open={open}
-  onClose={handleClose}
-  aria-labelledby="simple-modal-title"
-  aria-describedby="simple-modal-description"
->
-  {body}
-</Modal>
-)
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
@@ -74,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(3),
   },
   pic : {
     marginTop:236,
@@ -104,33 +94,32 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
-    description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
+    title: 'Bassic',
+    price: '45.000',
+    description: ['Kelola stok produk dengan mudah', 'Laporan penjualan lengkap', 'Jual produk digital'],
     buttonText: 'Sign up for free',
     buttonVariant: 'outlined',
   },
   {
-    title: 'Pro',
-    subheader: 'Most popular',
-    price: '15',
+    title: 'Premium',
+    subheader: 'Best Seller',
+    price: '50.000',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
+      'Semua fitur pada paket Basic',
+      'Dukungan printer struk',
+      'Live support 24 jam',
     ],
     buttonText: 'Get started',
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
-    price: '30',
+    title: 'Super POS!',
+    price: '70.000',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'Semua fitur pada paket Premium',
+      'Laporan penjualan lengkap',
+      'Jual produk digital',
+      
     ],
     buttonText: 'Contact us',
     buttonVariant: 'outlined',
@@ -160,7 +149,7 @@ export default function Pricing() {
             </Link>
            
           </nav>
-          <Button href="#" color="secondary" variant="outlined" className={classes.link} onClick={handleOpen}>
+          <Button href="#" color="secondary" variant="outlined" className={classes.link} >
             Login
           </Button>
         </Toolbar>
@@ -196,7 +185,7 @@ export default function Pricing() {
           {tiers.map((tier) => (
             // Enterprise card is full width at sm breakpoint
             <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
-              <Card>g
+              <Card>
                 <CardHeader
                   title={tier.title}
                   subheader={tier.subheader}
@@ -208,7 +197,7 @@ export default function Pricing() {
                 <CardContent>
                   <div className={classes.cardPricing}>x
                     <Typography component="h2" variant="h3" color="textPrimary">
-                      ${tier.price}
+                      Rp.{tier.price}
                     </Typography>
                     <Typography variant="h6" color="textSecondary">
                       /mo
